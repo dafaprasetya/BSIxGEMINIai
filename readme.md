@@ -17,7 +17,7 @@
    - Download and install Python from the [official website](https://www.python.org/downloads/).
 
 3. **Clone the Repository**:
-   - Open a terminal and run the following command to clone the repository:
+   - Open a terminal and run:
      ```sh
      git clone https://github.com/dafaprasetya/BSIxGEMINIai
      ```
@@ -27,7 +27,7 @@
      ```sh
      cd BSIxGEMINIai
      ```
-   - Install the required Python packages:
+   - Run the following command to install the required Python packages:
      ```sh
      pip install -r requirements.txt
      ```
@@ -37,16 +37,28 @@
      ```sh
      python Main.py
      ```
+
+6. **Login with Google**:
    - Login with Google to receive the cookie.
-   - If Google has detected Selenium, try changing the port, delete the "ujang shelby" folder, and run it again.
+
+7. **Handling Selenium Detection**:
+   - If Google detects Selenium, try changing the port, delete the "ujang shelby" folder, and run it again.
    - Wait 10 seconds.
-   - Use `/` to get an answer.
+
+8. **Get Answers**:
+   - Use `/` to get the answer.
+
+## For Windows Users (if crash occurs)
+
+- Download the Edge WebDriver.
+- Change `service=EdgeService(EdgeChromiumDriverManager().install())` to `service=PATH TO EDGEWEBDRIVER`.
 
 ## Tested On
 
 - Kali Linux
 
 Thanks
+
 
 ## ID
 
