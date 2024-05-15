@@ -1,7 +1,7 @@
 ## EN
-# BSIxGEMINIai
+# UBSIxGEMINIai
 
-**BSIxGEMINIai by dafa_prstya**
+**UBSIxGEMINIai by dafa_prstya**
 
 ## Features
 
@@ -62,9 +62,9 @@ Thanks
 
 ## ID
 
-# BSIxGEMINIai
+# UBSIxGEMINIai
 
-**BSIxGEMINIai by dafa_prstya**
+**UBSIxGEMINIai by dafa_prstya**
 
 ## Fitur
 
