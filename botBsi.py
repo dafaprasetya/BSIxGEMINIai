@@ -24,7 +24,7 @@ print("by: dafa_prstya")
 print("Checking for cookie........")    
 geminiai("Hai")
 print("Cookie success!")
-os.system('cls' if os.name == 'nt' else 'clear')
+# os.system('cls' if os.name == 'nt' else 'clear')
 
 
 options = webdriver.EdgeOptions()
