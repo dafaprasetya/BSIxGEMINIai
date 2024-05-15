@@ -49,7 +49,7 @@ class BOT:
             C = "C. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[5]/table/tbody/tr/td[2]').text
             D = "D. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[6]/table/tbody/tr/td[2]').text
             E = "E. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[7]/table/tbody/tr/td[2]').text
-            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris"
+            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris dan jawab dengan benar dan akurat"
             print(full)
             geminiai(full)
         except:
