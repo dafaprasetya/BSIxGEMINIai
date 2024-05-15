@@ -52,7 +52,7 @@ Thanks
 
 # BSIxGEMINIai
 
-**BSIxGEMINIai oleh dafa_prstya**
+**BSIxGEMINIai by dafa_prstya**
 
 ## Fitur
 
