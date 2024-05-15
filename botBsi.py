@@ -37,7 +37,7 @@ options.add_experimental_option("detach", True)
 options.add_argument('--remote-debugging-port=3241')
 options.add_argument('--start-maximized')
 path = Service('msedgedriver.exe')
-driver2 = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=options)
+driver2 = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=options) #windows user change "service=EdgeService(EdgeChromiumDriverManager().install())" to "service=PATH TO EDGEWEBDRIVER"
 
 class BOT:
     def ai(self, driver):
