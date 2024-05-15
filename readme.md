@@ -1,3 +1,4 @@
+## EN
 # BSIxGEMINIai
 
 **BSIxGEMINIai by dafa_prstya**
@@ -16,54 +17,95 @@
    - Download and install Python from the [official website](https://www.python.org/downloads/).
 
 3. **Clone the Repository**:
-   - Open a terminal and run the following command:
+   - Open a terminal and run the following command to clone the repository:
      ```sh
      git clone https://github.com/dafaprasetya/BSIxGEMINIai
-     cd BSIxGEMINIai
      ```
 
 4. **Install Requirements**:
-   - Run the following command to install the required Python packages:
+   - Navigate to the project directory:
+     ```sh
+     cd BSIxGEMINIai
+     ```
+   - Install the required Python packages:
      ```sh
      pip install -r requirements.txt
      ```
 
-5. **Run the Application**:
+5. **Run the Script**:
    - Execute the main script:
      ```sh
      python Main.py
      ```
-
-6. **Login with Google**:
-   - Follow the instructions to log in with your Google account to receive the cookie.
-   - If Google detects Selenium, try the following steps:
-     - Change the port.
-     - Delete the "ujang shelby" folder.
-     - Run the script again.
-
-7. **Wait for 10 Seconds**:
-   - Allow the script to initialize.
-
-8. **Get Answers**:
-   - Use the `/` command to get answers.
-
-## For Windows Users (if it crashes)
-
-1. **Download Edge WebDriver**:
-   - Download Edge WebDriver from the [official website](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/).
-
-2. **Modify the Script**:
-   - Change the line:
-     ```python
-     service=EdgeService(EdgeChromiumDriverManager().install())
-     ```
-     to:
-     ```python
-     service="PATH TO EDGEWEBDRIVER"
-     ```
+   - Login with Google to receive the cookie.
+   - If Google has detected Selenium, try changing the port, delete the "ujang shelby" folder, and run it again.
+   - Wait 10 seconds.
+   - Use `/` to get an answer.
 
 ## Tested On
 
-- KALI LINUX
+- Kali Linux
 
 Thanks
+
+## ID
+
+# BSIxGEMINIai
+
+**BSIxGEMINIai oleh dafa_prstya**
+
+## Fitur
+
+- **Auto Collect Cookie Gemini AI**: Secara otomatis mengumpulkan cookie dari Gemini AI (login Google diperlukan).
+- **Akurasi Jawaban**: Memberikan jawaban dengan akurasi 90%.
+
+## Cara Penggunaan
+
+1. **Install Microsoft Edge**:
+   - Unduh dan install Microsoft Edge dari [situs resmi](https://www.microsoft.com/edge).
+
+2. **Install Python**:
+   - Unduh dan install Python dari [situs resmi](https://www.python.org/downloads/).
+
+3. **Clone Repository**:
+   - Buka terminal dan jalankan:
+     ```sh
+     git clone https://github.com/dafaprasetya/BSIxGEMINIai
+     ```
+
+4. **Install Requirements**:
+   - Navigasi ke direktori proyek:
+     ```sh
+     cd BSIxGEMINIai
+     ```
+   - Jalankan perintah berikut untuk menginstall paket Python yang diperlukan:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+5. **Jalankan Script**:
+   - Eksekusi skrip utama:
+     ```sh
+     python Main.py
+     ```
+
+6. **Login dengan Google**:
+   - Login dengan Google untuk menerima cookie.
+
+7. **Mengatasi Deteksi Selenium**:
+   - Jika Google mendeteksi Selenium, coba ubah port, hapus folder "ujang shelby", dan jalankan lagi.
+   - Tunggu 10 detik.
+
+8. **Dapatkan Jawaban**:
+   - Gunakan `/` untuk mendapatkan jawaban.
+
+## Untuk Pengguna Windows (jika terjadi crash)
+
+- Unduh Edge WebDriver.
+- Ganti `service=EdgeService(EdgeChromiumDriverManager().install())` dengan `service=PATH TO EDGEWEBDRIVER`.
+
+## Diuji Pada
+
+- Kali Linux
+
+Terima kasih
