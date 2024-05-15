@@ -19,7 +19,7 @@ import os
 #RUN EDGE WITH PORT 3241
 print("checking cookie.....")
 f = Figlet(font='slant')
-print(f.renderText('BSI x GEMINIAI'))
+print(f.renderText('UBSI x GEMINIAI'))
 print("by: dafa_prstya")
 print("Checking for cookie........")    
 geminiai("Hai")
