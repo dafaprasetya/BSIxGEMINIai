@@ -3,3 +3,4 @@ __pycache__/*
 cookies.json
 cookies_1.json
 .gitignore
+package/__pycache__/*

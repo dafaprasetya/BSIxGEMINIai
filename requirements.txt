@@ -4,3 +4,5 @@ python-gemini-api==2.4.11
 selenium==4.20.0
 webdriver-manager==4.0.1
 log2d==0.0.18
+pyfiglet==1.0.2
+

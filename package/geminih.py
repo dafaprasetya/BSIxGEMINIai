@@ -3,7 +3,6 @@ from selenium.webdriver.edge.options import Options
 from selenium.webdriver.edge.service import Service
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.edge.service import Service as EdgeService
-import keyboard
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.ui import WebDriverWait
@@ -14,7 +13,7 @@ from time import sleep
 from plyer import notification
 from gemini import Gemini
 from pynput.keyboard import Key, Listener
-from EdgeGPT.EdgeUtils import Query, Cookie
+import os
 
 
 def geminiai(soal):
@@ -58,8 +57,9 @@ def geminiai(soal):
         options.add_argument('--ignore-ssl-errors')
         options.add_argument("--log-level=3")
         # options.add_experimental_option("detach", True)
-        options.add_argument("user-data-dir=Ujang Shelby");
-        options.add_argument("profile-directory=Ujang Shelby");
+        if os.name != "nt":
+            options.add_argument("user-data-dir=Ujang Shelby")
+            options.add_argument("profile-directory=Ujang Shelby")
 
         options.add_argument('--remote-debugging-port=3251')
         options.add_argument('--start-maximized')
