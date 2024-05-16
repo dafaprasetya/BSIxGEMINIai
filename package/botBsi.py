@@ -11,7 +11,7 @@ from selenium.webdriver.edge.service import Service
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from gemini import Gemini
 import pynput
-from geminih import geminiai
+from package.geminih import geminiai
 from pynput.keyboard import Key, Listener
 from pyfiglet import Figlet
 import os

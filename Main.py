@@ -5,7 +5,7 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.service import Service as EdgeService
 from pynput.keyboard import Key, Listener
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from botBsi import BOT
+from package.botBsi import BOT
 
 
 edge_options = Options()
