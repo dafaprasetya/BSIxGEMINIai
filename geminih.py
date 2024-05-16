@@ -12,7 +12,9 @@ import json
 from selenium import webdriver
 from time import sleep
 from plyer import notification
-
+from gemini import Gemini
+from pynput.keyboard import Key, Listener
+from EdgeGPT.EdgeUtils import Query, Cookie
 
 
 def geminiai(soal):
@@ -33,7 +35,6 @@ def geminiai(soal):
                 # print(i["value"])
                 nid = i["value"]
 
-        from gemini import Gemini
 
         cookies = {
             "__Secure-1PSIDCC" : psidcc,
@@ -52,6 +53,7 @@ def geminiai(soal):
         options = webdriver.EdgeOptions()
         options.add_experimental_option("excludeSwitches", ['enable-automation'])
         options.add_experimental_option("useAutomationExtension", False)
+        # options.add_experimental_option("detach", True)
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--ignore-ssl-errors')
         options.add_argument("--log-level=3")
@@ -63,43 +65,62 @@ def geminiai(soal):
         options.add_argument('--start-maximized')
         path = Service('msedgedriver.exe')
         driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=options)
-        driver.get("https://gemini.google.com")
-        try:
-            wait = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, "//*[@id='gb']/div/div[1]/div[2]/div/a")))
+        driver.get("https://gemini.google.com/app")
+        WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, "//*[@id='gb']/div/div[1]/div[2]/div/a")))
+        try : 
+            cookies = driver.get_cookies()
+            with open('cookies.json', 'w', newline='\n') as outputdata:
+                json.dump(cookies, outputdata)
+            test = open('cookies.json')
+            jonson = json.load(test)
+            for i in jonson:
+                if i['name'] == "__Secure-1PSIDCC":
+                    # print(i["value"])
+                    psidcc = i["value"]
+                if i['name'] == "__Secure-1PSID":
+                    # print(i["value"])
+                    psid = i["value"]
+                if i['name'] == "__Secure-1PSIDTS":
+                    # print(i["value"])
+                    psidts = i["value"]
+                if i['name'] == "NID":
+                    # print(i["value"])
+                    nid = i["value"]
+            cookies = {
+                "__Secure-1PSIDCC" : psidcc,
+                "__Secure-1PSID" : psid,
+                "__Secure-1PSIDTS" : psidts,
+                "NID" : nid,
+            }
+            
+        except UnboundLocalError:
+            print("failed trying again.......")
+            driver.get("https://gemini.google.com/app")
             sleep(10)
-        except: 
-            sleep(10)
-            WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, "//*[@id='gb']/div/div[1]/div[2]/div/a")))
-        cookies = driver.get_cookies()
-        with open('cookies.json', 'w', newline='\n') as outputdata:
-            json.dump(cookies, outputdata)
-
-        test = open('cookies.json')
-        jonson = json.load(test)
-
-        for i in jonson:
-            if i['name'] == "__Secure-1PSIDCC":
-                # print(i["value"])
-                psidcc = i["value"]
-            if i['name'] == "__Secure-1PSID":
-                # print(i["value"])
-                psid = i["value"]
-            if i['name'] == "__Secure-1PSIDTS":
-                # print(i["value"])
-                psidts = i["value"]
-            if i['name'] == "NID":
-                # print(i["value"])
-                nid = i["value"]
-
-        from gemini import Gemini
-
-        cookies = {
-            "__Secure-1PSIDCC" : psidcc,
-            "__Secure-1PSID" : psid,
-            "__Secure-1PSIDTS" : psidts,
-            "NID" : nid,
-        }
-
+            cookies = driver.get_cookies()
+            with open('cookies_1.json', 'w', newline='\n') as outputdata:
+                json.dump(cookies, outputdata)
+            test = open('cookies_1.json')
+            jonson = json.load(test)
+            for i in jonson:
+                if i['name'] == "__Secure-1PSIDCC":
+                    # print(i["value"])
+                    psidcc = i["value"]
+                if i['name'] == "__Secure-1PSID":
+                    # print(i["value"])
+                    psid = i["value"]
+                if i['name'] == "__Secure-1PSIDTS":
+                    # print(i["value"])
+                    psidts = i["value"]
+                if i['name'] == "NID":
+                    # print(i["value"])
+                    nid = i["value"]
+            cookies = {
+                "__Secure-1PSIDCC" : psidcc,
+                "__Secure-1PSID" : psid,
+                "__Secure-1PSIDTS" : psidts,
+                "NID" : nid,
+            }
         client = Gemini(cookies=cookies)
         prompt = soal
         response = client.generate_content(prompt)

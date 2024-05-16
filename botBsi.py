@@ -22,22 +22,25 @@ f = Figlet(font='slant')
 print(f.renderText('UBSI x GEMINIAI'))
 print("by: dafa_prstya")
 print("Checking for cookie........")    
-geminiai("Hai")
+geminiai("Hai") #check cookie
 print("Cookie success!")
 # os.system('cls' if os.name == 'nt' else 'clear')
 
+pil = input("Run edge?(y/n, default n)\n# ")
 
-options = webdriver.EdgeOptions()
-options.add_experimental_option("excludeSwitches", ['enable-automation'])
-options.add_experimental_option("useAutomationExtension", False)
-options.add_argument('--ignore-certificate-errors')
-options.add_argument('--ignore-ssl-errors')
-options.add_argument("--log-level=3")
-options.add_experimental_option("detach", True)
-options.add_argument('--remote-debugging-port=3241')
-options.add_argument('--start-maximized')
-path = Service('msedgedriver.exe')
-driver2 = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=options) #windows user change "service=EdgeService(EdgeChromiumDriverManager().install())" to "service=PATH TO EDGEWEBDRIVER"
+if pil == "y":
+    print("Running edge")
+    options = webdriver.EdgeOptions()
+    options.add_experimental_option("excludeSwitches", ['enable-automation'])
+    options.add_experimental_option("useAutomationExtension", False)
+    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--ignore-ssl-errors')
+    options.add_argument("--log-level=3")
+    options.add_experimental_option("detach", True)
+    options.add_argument('--remote-debugging-port=3241')
+    options.add_argument('--start-maximized')
+    path = Service('msedgedriver.exe')
+    driver2 = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()),options=options) #windows user change "service=EdgeService(EdgeChromiumDriverManager().install())" to "service=PATH TO EDGEWEBDRIVER"
 
 class BOT:
     def ai(self, driver):
@@ -49,7 +52,7 @@ class BOT:
             C = "C. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[5]/table/tbody/tr/td[2]').text
             D = "D. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[6]/table/tbody/tr/td[2]').text
             E = "E. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[7]/table/tbody/tr/td[2]').text
-            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris dan jawab dengan benar dan akurat"
+            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"jawab dengan benar dan akurat, pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris dengan benar dan akurat"
             print(full)
             geminiai(full)
         except:
