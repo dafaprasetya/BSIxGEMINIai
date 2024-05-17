@@ -1,5 +1,7 @@
+<p align="center">
+   <img src="https://github.com/dafaprasetya/BSIxGEMINIai/blob/main/package/logo/logo.png?raw=true" alt="UBSIxGEMINIai Banner" />
+</p>
 <h1 align="center">UBSIxGEMINIai</h1>
-
 <p align="center"><i>AI for everything</i></p>
 
 ## EN
