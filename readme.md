@@ -66,9 +66,8 @@ Thanks
 
 ## ID
 
-# UBSIxGEMINIai
-
-**UBSIxGEMINIai by dafa_prstya**
+<h1 align="center">UBSIxGEMINIai</h1>
+<p align="center"><i>AI for everything</i></p>
 
 ## Fitur
 
