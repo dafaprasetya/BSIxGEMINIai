@@ -20,7 +20,7 @@ import os
 print("checking cookie.....")
 f = Figlet(font='slant')
 print(f.renderText('UBSI x GEMINIAI'))
-print("by: dafa_prstya")
+print("dafaprasetya/BSIxGEMINIai")
 print("Checking for cookie........")    
 geminiai("Hai", a=any, b=any,c=any,d=any,e=any) #check cookie
 print("Cookie success!")

@@ -1,7 +1,9 @@
-## EN
-# UBSIxGEMINIai
+<h1 align="center">UBSIxGEMINIai</h1>
 
-**UBSIxGEMINIai by dafa_prstya**
+<p align="center"><i>AI for everything</i></p>
+
+## EN
+
 
 ## Features
 
