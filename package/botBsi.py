@@ -22,7 +22,7 @@ f = Figlet(font='slant')
 print(f.renderText('UBSI x GEMINIAI'))
 print("by: dafa_prstya")
 print("Checking for cookie........")    
-geminiai("Hai") #check cookie
+geminiai("Hai", a=any, b=any,c=any,d=any,e=any) #check cookie
 print("Cookie success!")
 # os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -52,8 +52,8 @@ class BOT:
             C = "C. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[5]/table/tbody/tr/td[2]').text
             D = "D. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[6]/table/tbody/tr/td[2]').text
             E = "E. "+driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[7]/table/tbody/tr/td[2]').text
-            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"jawab dengan benar dan akurat, pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris dengan benar dan akurat"
+            full = soal + '\n'+ A+ '\n'+B+ '\n'+C+ '\n'+D+ '\n'+E+"\n"+"jawab dengan benar dan akurat, pilih A, B, C, D atau E tanpa kesimpulan atau penjelasan atau alasan hanya jawab A,B,C,D atau E jawab dengan satu baris dengan benar, singkat(maksimal 60 karakter) dan akurat"
             print(full)
-            geminiai(full)
+            geminiai(full,A,B,C,D,E)
         except:
             print("Yahahah gagal")

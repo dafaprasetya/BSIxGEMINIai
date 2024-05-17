@@ -16,7 +16,7 @@ from pynput.keyboard import Key, Listener
 import os
 
 
-def geminiai(soal):
+def geminiai(soal, a,b,c,d,e):
     try:
         test = open('cookies.json')
         jonson = json.load(test)
@@ -44,9 +44,39 @@ def geminiai(soal):
 
         client = Gemini(cookies=cookies)
         prompt = soal
+        edge_options = Options()
+        edge_options.add_experimental_option("debuggerAddress","127.0.0.1:3241")
+        edge_options.use_chromium = True
+        s = Service('msedgedriver.exe')
         response = client.generate_content(prompt)
-        print(response.text)
-        notification.notify(title="jawabnmu telah datang!",message=response.text,app_name="",timeout=1 )
+        if str(a) in response.text[:50]:
+            print("jawabannya A")
+            driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[3]/table/tbody/tr/td[2]').click()
+        elif str(b) in response.text[:50]:
+            print("jawabannya B")
+            driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[4]/table/tbody/tr/td[2]').click()
+            # b.click()
+        elif str(c) in response.text[:50]:
+            driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[5]/table/tbody/tr/td[2]').click()
+            print("jawabannya C")
+            # c.click()
+        elif str(d) in response.text[:50]:
+            driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[6]/table/tbody/tr/td[2]').click()
+            print("jawabannya D")
+            # d.click()
+        elif str(e) in response.text[:50]:
+            driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[7]/table/tbody/tr/td[2]').click()
+            print("jawabannya E")
+            # e.click()
+        else:
+            print("Yahahah gagal")
+        print(response.text[:50])
+        notification.notify(title="jawabnmu telah datang!",message=response.text,app_name="",timeout=1)
         
     except:
         options = webdriver.EdgeOptions()
@@ -124,6 +154,28 @@ def geminiai(soal):
         client = Gemini(cookies=cookies)
         prompt = soal
         response = client.generate_content(prompt)
+        if str(a) in response.text[:50]:
+            print("jawabannya A")
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[3]/table/tbody/tr/td[2]').click()
+        elif str(b) in response.text[:50]:
+            print("jawabannya B")
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[4]/table/tbody/tr/td[2]').click()
+            # b.click()
+        elif str(c) in response.text[:50]:
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[5]/table/tbody/tr/td[2]').click()
+            print("jawabannya C")
+            # c.click()
+        elif str(d) in response.text[:50]:
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[6]/table/tbody/tr/td[2]').click()
+            print("jawabannya D")
+            # d.click()
+        elif str(e) in response.text[:50]:
+            driver.find_element(By.XPATH, '/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div/div[1]/div/div/div/div/div/div/div[1]/div[7]/table/tbody/tr/td[2]').click()
+            print("jawabannya E")
+            # e.click()
+        else:
+            print("Yahahah gagal")
+        
         print(response.text)
         
 # geminiai("hai")

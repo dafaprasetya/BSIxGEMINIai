@@ -4,3 +4,4 @@ cookies.json
 cookies_1.json
 .gitignore
 package/__pycache__/*
+tester.py
