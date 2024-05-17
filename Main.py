@@ -13,7 +13,7 @@ edge_options.add_experimental_option("debuggerAddress","127.0.0.1:3241")
 edge_options.use_chromium = True
 s = Service('msedgedriver.exe')
 driver = webdriver.Edge(service = EdgeService(EdgeChromiumDriverManager().install()), options = edge_options)
-driver.get('file:///home/prstya/Documents/testing/1.html')
+driver.get('https://elearning.bsi.ac.id/')
 
 def main():
     
