@@ -63,9 +63,8 @@
 
 Thanks
 ## Photos
-[![Whats-App-Image-2024-09-22-at-13-11-35.jpg](https://i.postimg.cc/hPrsK7wX/Whats-App-Image-2024-09-22-at-13-11-35.jpg)](https://postimg.cc/7f50Vbq4)
 <p align="center">
-   <img src="https://i.postimg.cc/hPrsK7wX/Whats-App-Image-2024-09-22-at-13-11-35.jpg" alt="UBSIxGEMINIai" width=600 />
+   <img src="https://i.postimg.cc/hPrsK7wX/Whats-App-Image-2024-09-22-at-13-11-35.jpg" alt="UBSIxGEMINIai" width=500 />
 </p>
 ## ID
 
